@@ -170,6 +170,12 @@ body {
   display the navbar vertically instead of horizontally
 */
 @media screen and (max-width: 580px) {
+  .anchor::before {
+    height: 1%;
+    margin: -1% 0 0;
+    animation: none;
+  }
+
   #navbar {
     position: static;
     padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
@@ -198,6 +204,12 @@ body {
 
   #titlePage #name {
     position: relative;
+
+    animation: none;
+  }
+
+  #about #headshot {
+    width: 25%;
   }
 }
 
