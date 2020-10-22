@@ -124,8 +124,12 @@ body {
 
   color: white;
   background-color: black;
-  font-size: 400%;
+  font-size: 70px;
   text-align: center;
+}
+
+#titlePage #keyWords {
+  margin: 0 5% 0 5%;
 }
 
 #titlePage #brandStatement {
@@ -133,11 +137,11 @@ body {
   position: absolute;
   bottom: 10%;
   max-width: 40%;
-  padding: 1%;
+  /*padding: 1%; */
   margin-left: 5%;
   /*border: 1px solid white;*/
 
-  font-size: 30%;
+  font-size: 25px;
 
   animation: brandUp 1s ease 1 both;
   animation-play-state: paused;
@@ -149,7 +153,7 @@ body {
   position: absolute;
   bottom: 12%;
   right: 6%;
-  font-size: 50%;
+  font-size: 45px;
   font-family: 'Courier New', Courier, monospace;
 
   animation: brandUp 1s ease 1 both;
@@ -175,6 +179,8 @@ body {
 #about #aboutText {
   display: inline-block;
   vertical-align: top;
+  margin: 10% 15% 5% 15%;
+  font-size: 25px;
 }
 
 /* ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
@@ -182,7 +188,10 @@ body {
     contains cool stuff i've done!
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
 #projects {
-
+  display: inline-block;
+  vertical-align: top;
+  margin: 5% 15% 15% 15%;
+  font-size: 25px;
 }
 
 /*
