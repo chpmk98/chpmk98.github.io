@@ -165,22 +165,30 @@ body {
   about section
     contains our headshot and description
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
-#about #headshot {
-  display: inline-block;
-  vertical-align: top;
-  width: 12%;
-  min-width: 100px;
-  margin-top: 2vw;
-  margin-right: 1vw;
-  border: 1px solid black;
-  border-radius: 1px;
+#about h1 {
+  margin: 10% 15% 0 15%;
+}
+
+#about #aboutContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 3vw;
+  margin: 2% 15% 5% 15%;
 }
 
 #about #aboutText {
-  display: inline-block;
-  vertical-align: top;
-  margin: 10% 15% 5% 15%;
+  order: 1;
   font-size: 25px;
+}
+
+#about #headshot {
+  order: 2;
+  flex: 0 0 auto;
+  width: 30%;
+  max-width: 280px;
+  min-width: 150px;
+  height: auto;
+  border-radius: 3px;
 }
 
 /* ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
@@ -242,16 +250,20 @@ body {
     animation: none;
   }
 
-  #about #headshot {
-    float: left;
-    width: 25%;
-    margin-bottom: 1vh;
-    margin-top: 5vw;
-    margin-right: 3vw;
+  #about h1 {
+    margin: 10% 8% 0 8%;
   }
 
-  #about #aboutText {
-    display: inline;
+  #about #aboutContent {
+    display: block;
+    margin: 3% 8% 5% 8%;
+  }
+
+  #about #headshot {
+    float: right;
+    width: 40%;
+    max-width: 200px;
+    margin: 1vh 0 2vw 4vw;
   }
 }
 

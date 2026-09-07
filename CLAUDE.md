@@ -11,8 +11,10 @@ the repository root of the `master` branch directly, so any commit pushed to
 `python3 -m http.server` from the repo root if you need a real origin).
 
 The entire site is three hand-written files: `index.html`, `index.css`, `index.js`.
-`headshot.jpg` and `resume.pdf` are linked assets; `favicon.ico` is referenced but
-not committed.
+Image assets live in `figures/` — `figures/headshot-2025.jpg` is the About-section
+portrait, cropped from `figures/IMG_8858.jpg`. `resume.pdf` sits at the repo root;
+`favicon.ico` is referenced but not committed. `figures/headshot.jpg` is an older
+unused portrait.
 
 ## Architecture
 
