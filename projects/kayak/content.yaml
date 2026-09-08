@@ -1,6 +1,6 @@
 ---
   title: "Reinforcement Learning for Uncertainty-Aware Social Robot Navigation"
-  description: "Incorporated pedestrian uncertainty estimation into a SARL navigation model to identify out-of-distribution pedestrians at runtime and maintain further distance. Hardware implementation using PyTorch on a TurtleBot2, running Ubuntu and ROS2, with an RGB-D camera for perception."
+  description: "The task of navigating robots through crowded pedestrian spaces -- e.g., malls, hospitals, and schools -- is incredibly complex but approachable using reinforcement learning (RL). However, the performance of learning techniques is notoriously poor when presented with situations that were not seen during training, resulting in near-misses and collisions that may injure people, damage property, and erode public trust in autonomous robots. We design an RL-based robot navigation model that identifies situations that it has not seen before during training and then navigates with increased caution, staying farther away from nearby pedestrians. We demonstrate that this reduces robot-human collisions by 80% in the most difficult of scenarios, and that the learned behavior successfully transfers from simulation to a real-world robot."
   thumbnail: "overview_people-icons_smooth (1).png"
   papers:
     2024:

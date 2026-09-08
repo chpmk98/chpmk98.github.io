@@ -179,8 +179,24 @@ function scrollTo(element) {
   function note(build) {
     list.innerHTML = "";
     var p = el("p", { class: "project-note" });
-    build(p);
+    if (typeof build === "string") p.textContent = build;
+    else build(p);
     list.appendChild(p);
+  }
+
+  function browseOnGitHub(p) {
+    p.appendChild(document.createTextNode("Couldn’t load the project list. Browse it on "));
+    p.appendChild(externalLink(
+      "https://github.com/" + REPO + "/tree/" + BRANCH + "/projects", "GitHub"));
+    p.appendChild(document.createTextNode("."));
+  }
+
+  // fetch() of a relative path does not work from a file:// page, so the
+  // whole section needs the site to be served over http.
+  if (location.protocol === "file:") {
+    note("Run a local web server (e.g. `python3 -m http.server`) to preview the " +
+      "projects section — it can’t read the project files from a file:// page.");
+    return;
   }
 
   // The subdirectory list normally comes from the GitHub contents API. For
@@ -202,8 +218,11 @@ function scrollTo(element) {
             .map(function (e) { return e.name; });
         });
 
+  var slugCount = 0;
+
   slugSource
     .then(function (slugs) {
+      slugCount = slugs.length;
       return Promise.all(slugs.map(function (slug) {
         return fetch(resolveUrl(slug, "content.yaml"))
           .then(function (res) {
@@ -219,7 +238,9 @@ function scrollTo(element) {
         return p && p.data && p.data.title && p.data.description;
       });
       if (!projects.length) {
-        note(function (p) { p.textContent = "No projects to show yet."; });
+        // slugCount 0 -> nothing in projects/ yet; otherwise the content.yaml
+        // files could not be read or were missing title/description.
+        note(slugCount ? browseOnGitHub : "No projects to show yet.");
         return;
       }
       projects.sort(function (a, b) {
@@ -233,11 +254,6 @@ function scrollTo(element) {
     })
     .catch(function (err) {
       console.error(err);
-      note(function (p) {
-        p.appendChild(document.createTextNode("Couldn’t load the project list. Browse it on "));
-        p.appendChild(externalLink(
-          "https://github.com/" + REPO + "/tree/" + BRANCH + "/projects", "GitHub"));
-        p.appendChild(document.createTextNode("."));
-      });
+      note(browseOnGitHub);
     });
 })();

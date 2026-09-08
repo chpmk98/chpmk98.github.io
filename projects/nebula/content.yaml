@@ -1,6 +1,7 @@
 ---
-  title: "Privacy-Preserving Sensor Network using Third-Pary Smartphones as Gateways and Data Mules"
-  description: "Designed and benchmarked an opportunistic sensor network that preserves the location and timing privacy of mobile, third-party gateways (i.e., smartphones)."
+  title: "Privacy-Preserving Sensor Network using Third-Party Smartphones as Gateways and Data Mules"
+  description: "Personally-owned smartphones may be the perfect network gateways for widely distributed sensor networks -- smartphones are globally distributed; have plentiful memory, compute, battery, and networking capabilities; and undergo regular maintenance. However, using personal devices as gateways is wrought with privacy and security concerns, one of which is the possible exposure of timestamped locations of a smartphone as it interacts with nearby sensors, which could be used to uniquely identify the owner of the smartphone. We design a privacy-focused network architecture that creatively uses well-established cryptographic primitives to preserve the location and timing privacy of smartphones while verifiably transporting sensor data and compensating smartphone owners for their participation in the network."
+  thumbnail: "nebula-example.png"
   papers:
     2022:
       venue: "EuroSec"
