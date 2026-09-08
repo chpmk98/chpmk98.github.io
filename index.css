@@ -195,11 +195,57 @@ body {
   projects section
     contains cool stuff i've done!
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
-#projects {
-  display: inline-block;
-  vertical-align: top;
-  margin: 5% 15% 15% 15%;
+#projects h1 {
+  margin: 10% 15% 0 15%;
+}
+
+#projectList {
+  margin: 2% 15% 15% 15%;
   font-size: 25px;
+}
+
+.project {
+  display: flex;
+  align-items: flex-start;
+  gap: 2vw;
+  margin-bottom: 8%;
+}
+
+.project:last-child {
+  margin-bottom: 0;
+}
+
+.project .project-thumb {
+  flex: 0 0 auto;
+  width: 25%;
+  max-width: 220px;
+  min-width: 120px;
+  height: auto;
+  border-radius: 3px;
+}
+
+.project .project-name {
+  margin: 0 0 0.3em 0;
+  font-size: 30px;
+}
+
+.project .project-desc {
+  margin: 0 0 0.5em 0;
+}
+
+.project .project-links {
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.project .project-links a {
+  margin-right: 1.2em;
+  white-space: nowrap;
+}
+
+.project-note {
+  font-size: 20px;
+  color: #555;
 }
 
 /*
@@ -264,6 +310,25 @@ body {
     width: 40%;
     max-width: 200px;
     margin: 1vh 0 2vw 4vw;
+  }
+
+  #projects h1 {
+    margin: 10% 8% 0 8%;
+  }
+
+  #projectList {
+    margin: 3% 8% 10% 8%;
+  }
+
+  .project {
+    display: block;
+  }
+
+  .project .project-thumb {
+    float: right;
+    width: 40%;
+    max-width: 180px;
+    margin: 0.5vh 0 2vw 4vw;
   }
 }
 

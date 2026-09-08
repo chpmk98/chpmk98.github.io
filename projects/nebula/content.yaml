@@ -1,0 +1,11 @@
+---
+  title: "Privacy-Preserving Sensor Network using Third-Pary Smartphones as Gateways and Data Mules"
+  description: "Designed and benchmarked an opportunistic sensor network that preserves the location and timing privacy of mobile, third-party gateways (i.e., smartphones)."
+  papers:
+    2022:
+      venue: "EuroSec"
+      url: "3517208.3523757.pdf"
+    2024: 
+      venue: "Oakland S&P"
+      url: "2024-409.pdf"
+  github: "https://github.com/lab11/nebula"

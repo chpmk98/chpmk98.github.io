@@ -11,6 +11,7 @@
     <title>Alvin Tan</title>
     <link rel="stylesheet" type="text/css" href="index.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
   </head>
 
   <body>
@@ -22,7 +23,7 @@
         <li><a href="#heyo" id="logo">AT</a></li>
         <li><a href="#about" id="aboutLink">About</a></li>
         <li><a href="#projects" id="projectsLink">Projects</a></li>
-        <li><a href="papers/1-page%20resume%209_7_2026%20(1).pdf" id="resumeLink" target="_blank" rel="noopener">Resume</a></li>
+        <li><a href="projects/1-page%20resume%209_7_2026%20(1).pdf" id="resumeLink" target="_blank" rel="noopener">Resume</a></li>
         <li><a href="https://www.linkedin.com/in/alvin-tan-10533012a/" id="linkedinLink" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
     </div>
@@ -82,10 +83,21 @@
     <!-- projects -->
     <div class="anchor" id="projects">
       <h1>Projects</h1>
-      <p>
-      To explore what software projects Alvin has worked on, please visit his  
-      <a href="https://github.com/chpmk98" target="_blank">GitHub</a>.
-      </p>
+      <!--
+        This list is built by index.js from the subdirectories of projects/.
+        To add a project, drop a folder in projects/ with a content.yaml
+        (see projects/README.md for the schema) and push it to master.
+      -->
+      <div id="projectList">
+        <p class="project-note">Loading projects&hellip;</p>
+        <noscript>
+          <p class="project-note">
+            Enable JavaScript to see the project list, or browse it on
+            <a href="https://github.com/chpmk98/chpmk98.github.io/tree/master/projects"
+               target="_blank" rel="noopener">GitHub</a>.
+          </p>
+        </noscript>
+      </div>
     </div>
 
 

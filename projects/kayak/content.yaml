@@ -1,0 +1,10 @@
+---
+  title: "Reinforcement Learning for Uncertainty-Aware Social Robot Navigation"
+  description: "Incorporated pedestrian uncertainty estimation into a SARL navigation model to identify out-of-distribution pedestrians at runtime and maintain further distance. Hardware implementation using PyTorch on a TurtleBot2, running Ubuntu and ROS2, with an RGB-D camera for perception."
+  thumbnail: "overview_people-icons_smooth (1).png"
+  papers:
+    2024:
+      venue: "ICRA"
+      url: "2407.06056v1.pdf"
+  video: "https://www.youtube.com/watch?v=9IDhXvCC58w"
+  github: "https://github.com/sarapohland/stranger-danger"

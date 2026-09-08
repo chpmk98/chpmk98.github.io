@@ -10,11 +10,13 @@ the repository root of the `master` branch directly, so any commit pushed to
 `master` is published. Preview locally by opening `index.html` in a browser (or
 `python3 -m http.server` from the repo root if you need a real origin).
 
-The entire site is three hand-written files: `index.html`, `index.css`, `index.js`.
-Image assets live in `figures/` — `figures/headshot-2025.jpg` is the About-section
-portrait, cropped from `figures/IMG_8858.jpg`. `resume.pdf` sits at the repo root;
-`favicon.ico` is referenced but not committed. `figures/headshot.jpg` is an older
-unused portrait.
+The site is three hand-written files — `index.html`, `index.css`, `index.js` — plus
+`js-yaml` loaded from a CDN (the only runtime dependency). Image assets live in
+`figures/` (`figures/headshot-2025.jpg` is the About-section portrait, cropped from
+`figures/IMG_8858.jpg`; `figures/headshot.jpg` is an older unused one). Each project's
+files (a `content.yaml` plus its PDFs/images) live in `projects/<slug>/`, documented
+in `projects/README.md`. The résumé PDF is in `projects/` too. `favicon.ico` is
+referenced but not committed.
 
 ## Architecture
 
@@ -33,6 +35,16 @@ pseudo-element carries a negative top margin equal to a "header height", so `#an
 jump links land below the sticky navbar instead of under it. That offset height is
 itself a scroll-scrubbed animation (`anchorResize`) so it tracks the navbar as it
 shrinks.
+
+**Runtime-built projects list.** The `#projectList` in the Projects section is empty
+in the HTML; `index.js` fills it on load. It gets the list of `projects/` subdirectories
+from the public GitHub contents API (`api.github.com/repos/chpmk98/chpmk98.github.io/
+contents/projects`), so the list only reflects what has been pushed to `master` — there
+is no build step and no manifest. For each subdirectory it fetches
+`projects/<slug>/content.yaml` over a relative path, parses it with `js-yaml`, and
+renders a `.project` card; relative paths in the YAML resolve against that project's
+folder, absolute URLs are used as-is. `index.html?projects=slug1,slug2` overrides the
+API call for local preview before pushing.
 
 **Mobile breakpoint.** The `@media screen and (max-width: 580px)` block is a distinct
 layout: the navbar becomes non-sticky and vertical, and every scroll-scrubbed
