@@ -56,5 +56,9 @@ block.
 
 - Layout uses `vw`/`vh` units and percentage margins throughout; font sizes are mostly
   percentages or `px`. Match the surrounding unit choice when editing a rule.
+- Typography: body copy and headings are Lato; the `#navbar #logo` wordmark ("AT")
+  and the `#titlePage #name` signature ("Alvin Tan") are JetBrains Mono, a deliberate
+  paired monospace "identity" treatment — keep those two in the same font. Both
+  families load from Google Fonts in `index.html`.
 - Dead code is kept as comments rather than deleted. Follow that pattern for
   experimental changes unless asked to remove it.

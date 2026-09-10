@@ -6,7 +6,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Raleway', Veranda, Geneva, sans-serif;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-anchor: none;
@@ -48,7 +48,7 @@ body {
 
 #navbar #logo {
   /* make the logo do special things here ig */
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'JetBrains Mono', ui-monospace, 'Courier New', monospace;
   color: white;
   font-size: 400%;
   text-decoration: none;
@@ -154,7 +154,9 @@ body {
   bottom: 12%;
   right: 6%;
   font-size: 45px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'JetBrains Mono', ui-monospace, 'Courier New', monospace;
+  font-weight: 500;
+  letter-spacing: 0.04em;
 
   animation: brandUp 1s ease 1 both;
   animation-play-state: paused;
