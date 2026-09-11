@@ -168,14 +168,17 @@ body {
     contains our headshot and description
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
 #about h1 {
-  margin: 10% 15% 0 15%;
+  /* vertical margins use vh, not %, since a %  margin-top/bottom resolves
+     against the containing block's WIDTH -- a bare % here would make this
+     gap balloon on a wide screen instead of tracking vertical space */
+  margin: 6vh 15% 0 15%;
 }
 
 #about #aboutContent {
   display: flex;
   align-items: flex-start;
   gap: 3vw;
-  margin: 2% 15% 5% 15%;
+  margin: 2vh 15% 4vh 15%;
 }
 
 #about #aboutText {
@@ -198,11 +201,12 @@ body {
     contains cool stuff i've done!
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
 #projects h1 {
-  margin: 10% 15% 0 15%;
+  /* see the note on #about h1 -- vertical margins use vh, not % */
+  margin: 6vh 15% 0 15%;
 }
 
 #projectList {
-  margin: 2% 15% 15% 15%;
+  margin: 2vh 15% 6vh 15%;
   font-size: 25px;
 }
 
@@ -210,7 +214,7 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 2vw;
-  margin-bottom: 8%;
+  margin-bottom: 4vh;
 }
 
 .project:last-child {
@@ -299,12 +303,12 @@ body {
   }
 
   #about h1 {
-    margin: 10% 8% 0 8%;
+    margin: 5vh 8% 0 8%;
   }
 
   #about #aboutContent {
     display: block;
-    margin: 3% 8% 5% 8%;
+    margin: 0vh 8% 0vh 8%;
   }
 
   #about #headshot {
@@ -315,11 +319,11 @@ body {
   }
 
   #projects h1 {
-    margin: 10% 8% 0 8%;
+    margin: 5vh 8% 0 8%;
   }
 
   #projectList {
-    margin: 3% 8% 10% 8%;
+    margin: 2vh 8% 5vh 8%;
   }
 
   .project {
