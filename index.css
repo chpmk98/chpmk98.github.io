@@ -178,7 +178,7 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 3vw;
-  margin: 2vh 15% 4vh 15%;
+  margin: 0vh 15% 0vh 15%;
 }
 
 #about #aboutText {
